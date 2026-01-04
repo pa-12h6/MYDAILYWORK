@@ -22,5 +22,8 @@ This project is developed as part of the Web Development Internship at MyDailyWo
 2. Go to `online-quiz-maker`
 3. Open `index.html` in browser
 
+### Live demo 
+https://pa-12h6.github.io/MYDAILYWORK/
+
 ### Author
 Pallavi Kishor Joge
