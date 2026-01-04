@@ -1,0 +1,213 @@
+
+/* =========================
+   Global Reset & Variables
+========================= */
+:root {
+  --primary: #4f46e5;
+  --primary-dark: #4338ca;
+  --secondary: #22c55e;
+  --danger: #ef4444;
+  --bg: #f8fafc;
+  --card-bg: #ffffff;
+  --text: #1e293b;
+  --muted: #64748b;
+  --border: #e5e7eb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/* =========================
+   Layout
+========================= */
+.container {
+  max-width: 420px;
+  margin: 60px auto;
+  background: var(--card-bg);
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1,
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* =========================
+   Inputs & Textarea
+========================= */
+input,
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  font-size: 14px;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+textarea {
+  resize: none;
+  min-height: 80px;
+}
+
+/* =========================
+   Buttons
+========================= */
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 10px;
+  border: none;
+  background: var(--primary);
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s, box-shadow 0.1s;
+}
+
+button:hover {
+  background: var(--primary-dark);
+}
+
+button:active {
+  transform: scale(0.98);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15) inset;
+}
+
+/* Secondary button style */
+button.secondary {
+  background: var(--secondary);
+}
+
+button.secondary:hover {
+  background: #16a34a;
+}
+
+/* =========================
+   Links (Home page)
+========================= */
+.links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.links a {
+  flex: 1;
+  margin: 0 6px;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 0;
+  border-radius: 10px;
+  font-size: 14px;
+  background: #eef2ff;
+  color: var(--primary);
+  font-weight: 500;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.links a:hover {
+  background: #e0e7ff;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   Quiz List
+========================= */
+ul {
+  list-style: none;
+}
+
+li {
+  background: #f1f5f9;
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li button {
+  width: auto;
+  padding: 8px 14px;
+  font-size: 13px;
+}
+
+/* =========================
+   Quiz Options
+========================= */
+#options button {
+  background: #f1f5f9;
+  color: var(--text);
+  border: 1px solid var(--border);
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+#options button:hover {
+  background: #e0e7ff;
+  border-color: var(--primary);
+}
+
+/* =========================
+   Result Page
+========================= */
+#result {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--secondary);
+}
+
+/* =========================
+   Mobile Responsiveness
+========================= */
+@media (max-width: 480px) {
+  .container {
+    margin: 30px 16px;
+    padding: 22px;
+  }
+
+  h1,
+  h2 {
+    font-size: 20px;
+  }
+}
+
